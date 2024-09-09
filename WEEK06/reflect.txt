@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #6
+Full Name  : Chaerin Yoo
+Student ID#: 102998234
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. I use three arrays in workshop part2. Three arrays 'cost', 'priority', and 'finance' of the size 'MAX_NUMBER_OF_ITEMS' are used to store different types of data related to each item. The reason why I use arrays, it makes it possible to easily connect several information such as cost, priority, finance for each item, which in turn makes the code more readable and easier to maintain.
+
+2. 
+- original 'for' construct:
+double cost[MAX_NUMBER_OF_ITEMS];
+int priority[MAX_NUMBER_OF_ITEMS];
+char finance[MAX_NUMBER_OF_ITEMS];
+
+printf("Item Priority Financed        Cost\n");
+printf("---- -------- -------- -----------\n");
+for (i = 0; i < numOfitems; i++)
+{
+	printf("%3d  %5d    %5c    %11.2lf\n", i + 1, priority[i], finance[i], cost[i]);
+}
+
+printf("---- -------- -------- -----------\n");
+printf("                      $%11.2lf\n", total);
+
+- 'while' construct:
+double cost[MAX_NUMBER_OF_ITEMS];
+int priority[MAX_NUMBER_OF_ITEMS];
+char finance[MAX_NUMBER_OF_ITEMS];
+
+printf("Item Priority Financed        Cost\n");
+printf("---- -------- -------- -----------\n");
+
+int i = 0;
+while (i < numOfitems)
+{
+    printf("%3d  %5d    %5c    %11.2lf\n", i + 1, priority[i], finance[i], cost[i]);
+    i++;
+}
+
+printf("---- -------- -------- -----------\n");
+printf("                      $%11.2lf\n", total);
+
+- It is more convenient to repeat an array because of its concise syntax and initialization, and other iterative structures may require initialization or other conditions, so it is more readable and concise to use the for statement in this array.
+
+
+3. I continued to test and debug my program to make it work. As I wrote and executed the code one by one, I checked for errors and good debugging. Also, I checked and fixed the syntax issue where the semicolon was missing or using the semicolon after the if statement condition as an error provided by the visual studio. When I assigned the value of a data type that I declared as a semantic problem to another type of variable, the program did not come out as I wanted, so I fixed it through testing and debugging.

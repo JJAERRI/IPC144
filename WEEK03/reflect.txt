@@ -1,0 +1,24 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Chaerin Yoo
+Student ID#: 102998234
+Email      : cyoo10@myseneca.ca
+Section    : NFF
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. I created 12 variables in workshop3 part2. It is much simpler for me to comprehend the function of each variable and how in which it is used within the program because of the fact that I have grouped variables that are connected together and given them titles that have significance.
+
+2. (strength == 'L' || strength == 'l') && (type1 == 'L' || type1 == 'l')
+Relational strength == 'L' || strength == 'l' to see if the variable strength corresponds to either 'L' or 'l'. This method involves two relationships with the logical operator '&&' as the next. I make sure that both coffee strength and type are light, and also check users' preferences for light strength and light type. If coffee product ID_1 matches the given conditions, it satisfies the following statement.
+
+3. DeMorgan's law is a fundamental principle that plays an important role in logic and computer. It comes in two main versions, each of which applies to the logical operators NOT, AND, and OR.
+This is my code in workshop3 part1 :
+PRODUCT1_ID != PRODUCT2_ID && PRODUCT1_ID != PRODUCT3_ID
+DeMorgan’s Law is as follows:
+!(PRODUCT1_ID == PRODUCT2_ID || PRODUCT1_ID == PRODUCT3_ID)

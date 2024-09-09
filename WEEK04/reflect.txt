@@ -1,0 +1,66 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #4
+Full Name  : Chaerin Yoo
+Student ID#: 102998234
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. While : It's an iteration that checks the condition first. It checks the condition before it's executed, and if the condition is false at the beginning, the iteration will not run. Use 'While' when I want to create a iteration that continues while the condition is true. For example, if I keep typing a true condition, I can make the it continue to run.
+
+int number;
+  printf("Enter a positive integer: \n");
+  scanf("%d", &number);
+While (number<=0);
+  { 
+     printf("Invalid input. Please enter a positive integer: ");
+     scanf("%d", &number);
+  } 
+  printf("The entered positive integer is: %d\n", number);
+
+These iterations continue until the user enters a positive integer.
+
+do-while: An iteration that verifies the condition later. The body of the iteration is executed first, then the condition is checked. This is useful when the body of the iteration must be executed at least once, regardless of the initial conditions. For example,
+
+int number;
+do 
+   {
+        printf("Enter a positive integer: ");
+        scanf("%d", &number);
+        if (number <= 0)
+        {
+            printf("Invalid input. Please try again.\n");
+        }
+    } while (number <= 0); 
+
+    printf("The entered positive integer is: %d\n", number);
+
+These conditional statements will be entered first, and if the number is a positive integer, the iteration will continue to run.
+
+2. "if/else if" is more effective than "if" because if the "if/else if" finds a true condition for the first time, it does not evaluate the condition afterwards. If condition1 is true, only the code block below condition1 runs and the rest of the condition is skipped. This is more efficient than evaluating the condition independently from each "if" statement. If I only write the if statement, even if the first if statement is false, there is an inconvenience that I have to consider the condition of the first if statement as well because I run the next if statement. For example, in my workshop part2
+
+if/else if :
+if (apples < pick)
+{
+    printf("You picked too many... only %d more APPLE(S) are needed.\n", apples);
+}
+else if (pick <= 0)
+{
+    printf("ERROR: You must pick at least 1!\n");
+}
+
+only use if:
+if (apple < pick)
+{
+    printf("You picked too many... only %d more APPLE(S) are needed.\n", apples);
+}
+if (!(apple < pick) && pick <= 0)
+{
+    printf("ERROR: You must pick at least 1!\n");
+}
+
+3. I made an effort to write code that was easy to understand when I was writing it. I created a clear distinction between the codes that contain '{}' since further repeats lead to misunderstanding over which repetitions and if statements appear first. This is because more repetitions lead to confusion. In addition, the functions that are included within square brackets were protected from errors by the formatting of the code.

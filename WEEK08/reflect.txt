@@ -1,0 +1,66 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #7
+Full Name  : Chaerin Yoo
+Student ID#: 102998234
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. If structures were not used in this workshop, this would impact how you manage the data. To help contrast the differences, first:
+a) Copy the structure definitions from your code into this file then,
+struct PlayerInfo
+{
+    int num_lives;
+    char character_symbol;
+    int num_treasure;
+    int positions[MAXIMUM_PATH];
+};
+
+struct GameInfo
+{
+    int max_num_move;
+    int path_length;
+    int bombs[MAXIMUM_PATH];
+    int treasure[MAXIMUM_PATH];
+};
+b) Copy the variable declaration section of your code into this file.
+    struct PlayerInfo player;
+    struct GameInfo game;
+
+Now, revise the code for only for the variable declaration section (b) above, to demonstrate what you would have to do to make your solution work without structures.
+
+int player_num_lives;
+char player_character_symbol;
+int player_num_treasure;
+int player_positions[MAXIMUM_PATH];
+
+int game_max_num_move;
+int game_path_length;
+int game_bombs[MAXIMUM_PATH];
+int game_treasure[MAXIMUM_PATH];
+
+
+2. Parallel arrays were used in this workshop. Identify the parallel arrays (refer to your code) and, explain the relationship between these arrays and how they contributed to your solution.
+player.positions[i] / game.bombs[j] / game.treasure[j]
+Parallel arrays make it easy to track a number of information related to the game. For example, I can check the player's location at any point in the game by looking at the corresponding index in the player.position array.
+During gameplay, these arrays are critical for the player to update and check the status of the game, such as making sure they have found a bomb at their current location and if they have found a treasure.
+The parallel array makes the code structure clear.
+
+3. Examine your part-2 code and identify the line number where the first deepest nested statement is located. Copy this statement into this file. Provide an explanation of the complete logic required to lead for that statement to be executed.
+
+			if (game.bombs[nextMove - 1] == 1 && game.treasure[nextMove - 1] == 1)
+			{
+				player.num_lives -= 1;
+				player.num_treasure += 1;
+				printf("===============> [&] !!! BOOOOOM !!! [&]\n");
+				printf("===============> [&] $$$ Life Insurance Payout!!! [&]\n");
+				board[nextMove - 1] = '&';
+			}
+
+The first condition checks if there is a bomb at the specified next move position (game.bombs[nextMove - 1] == 1).
+The second condition checks if there is treasure at the same specified next move position (game.treasure[nextMove - 1] == 1).
+If both conditions are true (i.e., there is a bomb and treasure at the next move position), the block inside the if statement is executed.

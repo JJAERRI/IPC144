@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  : Chaerin Yoo
+Student ID#: 102998234
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. In workshop part 2, I already have the number of iterations that I need to repeat as many times as the already declared log_days. So I used the 'for' loop because it's useful, knowing how many iterations. In this situation, I used the for statement because it provides a clear structure to express the defined number of times, which makes it simpler and more readable than other iterations.
+
+2. I marked the month using the 'switch' statement. The switch statement is used to select only one case out of several values, and I chose it because it is highly readable when I have to choose one out of several values. Also, each case is clearly separated, it also maintains the consistency of the code.
+
+3.  By giving variables and macros meaningful names, I can make my code more readable and easier to understand. For example, I can use MIN_YEAR and MAX_YEAR to provide clarity and code within a range of years instead of hardcoding 2012 and 2022.
+Using variables and macros enables coordinated modifications to be made whenever information such as the minimum and maximum number of years or the number of log days has to be modified. I may make changes to the values in a single location (the place where the variables or macros are defined), rather than having to go through the code for each and every instance of values that are hardcoded.
+Macros and variables are more readable than magic numbers. Magic numbers can be difficult to intuitively understand what the code means, but macros and variables are much more readable because they are named. For example, Variables such as 'year', 'month', and 'valid' are much more readable by naming them rather than displaying them with each number.

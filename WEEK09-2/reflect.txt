@@ -1,0 +1,23 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #8
+Full Name  : Chaerin Yoo
+Student ID#: 102998234
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Return Statement: The function calculates the conversion from pounds to kilograms and directly returns the result using the return statement. This is a typical way to return a value from a function in C.
+- double convertLbsKg(const double* pounds)
+Pointer Argument: The function also accepts an address of a variable where it can store the result of the conversion in kilograms. This is done by dereferencing the pointer passed to the function and assigning the calculated value to the memory location pointed to by the pointer.
+- void convertLbs(const double* pounds, double* kilograms, int* grams)
+
+2. 
+- getCatFoodInfo function: The fact that it takes user input and uses it to build a CatFoodInfo structure makes this function very cohesive. Data collection regarding a cat food product is its sole purpose. In order to carry out its mission, this function does not engage in direct communication with other functions. All it needs is the user-supplied data via the usual input. Easy reusable and maintenance are results of its loose coupling with other functions.
+- calculateReportData function: A report detail record can be derived from the supplied CatFoodInfo structure by means of this function. It determines a number of parameters, including kilos, grams, servings, cost per serving, and calories consumed. Calculating and building a report data structure is its only responsibility. It makes computations using the CatFoodInfo structure as input, but it doesn't communicate with other functions to get that data. Loose coupling is guaranteed by its reliance on the input structure and its independent calculation performance.
+
+3. By separating the code into header and source files, I can safely work on separate aspects of the application at the same time. So that I don't have to worry about the whole codebase, I can concentrate on utilizing or implementing certain functionalities.
+For example, By declaring the user-defined function in the header file and including the header file in the remaining c file, it can be used without making a separate declaration.
