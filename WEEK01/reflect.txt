@@ -1,0 +1,28 @@
+###########################################################################
+
+                              Reflection
+                             Workshop - #1
+Full Name  : Chaerin yoo
+Student ID#: 102998234
+Email      : cyoo10@myseneca.ca
+Section    : NFF
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+###########################################################################
+
+1. I don't have any programming experience, so everything related to coding is quite new to me. As for the C programming and the course, I've heard that C is a just computer language, often used for system programming. I'm wonder to see how it compares to other computer languages.
+
+2. The compiling process involves translating C code that I write into machine code that the computer can understand and execute. This transformation from a C text file to an executable program seems like a important step in the programming. Therefore, compiling is really important in C programming.
+
+3. I'm hoping this course will teach me a lot of things. I didn't know much about C programming until I took this course, but after I completed this course, I want to become someone who knows a lot about C. Also, I want you to know what code I write and how to solve problems. I expect this course challenging for me, but I think it will be rewarding and helping me to develop problem solving skills.
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Chaerin yoo
+Student ID#: 102998234
+Email      : cyoo10@myseneca.ca
+Section    : NFF
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. a=4 / a=3
+Explanation : The first result is that since a was declared a postfix 'a++' before it was used in the printf statement, a=4 comes out when printed.
+The second result is 3 before a++ is calculated because it is declared a=3 first and printed out in printf statements as it is.
+
+2. The value price1 is not being converted as intended because we used a float variable. Due to the limits of floating point representation, '24.96' might not be represented as intended in the float type because it uses 32 bits to represent a floating point with limited accuracy. With the use of double variables, the remaining values are more accurate floating-point representations. The values should convert as intended because the double type uses 64 bits.
+
+3. In the first example, an implicit transform occurs in which the result of integer division of money/100 is automatically transformed into a double via %lf format specifier. In the second example, a coercion occurs in which an integer division resulting from division between two integers is forcibly transformed into an integer via %d format specifier. In the third example, the transform is applied explicitly on (double)money, and the %lf format specifier is used to report the division results in double form. In the fourth example, %d format specifier is used to explicitly convert the double result after division into an integer, with the decimal places trimmed.
+
