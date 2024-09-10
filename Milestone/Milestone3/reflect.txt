@@ -1,0 +1,46 @@
+/*
+*****************************************************************************
+                        Assignment 1 - Milestone 3
+Full Name  : Chaerin Yoo
+Student ID#: 102998234
+Email      : cyoo10@myseneca.ca
+Section    : NFF
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1. Instead of manually iterating through the character array Character to find a specific character value, I can use the strchr() function from the string library. 
+- Code Snippet1: 
+if (strchr(Character, value) == NULL) 
+{
+    count = 0;
+} 
+else 
+{
+    count = 1;
+}
+By eliminating the need for manual iteration of the character array, the use of strchr() simplifies the code. Additionally, it makes the code more accessible and intelligible for other programmers. Standard library functions such as strchr() are frequently improved for efficiency, which may result in the execution of the function being completed more quickly. 
+- Code Snippet2:
+while (Input[length] != '\0') {
+    length++;
+}
+-> It is possible for me to replace this snippet of code with the strlen() function that is found in the string library: length = strlen(Input); strlen() offers a more short method of determining the length of a string, and it also makes the code more understandable by conveying the intent in a more straightforward manner. It is common practice to optimize the performance of standard library functions, which may result in increased efficiency. 
+
+2. strcpy() and strncpy() are both used for copying strings. 
+- 'strcpy()' function copies the entire source string to the destination string until it encounters a NULL termination character. Therefore, if the source string is not terminated by a NULL character, it can lead to memory overrun. This function typically does not check the size of the destination buffer, so there is a risk of overrun.
+- 'strncpy()' function is similar to strcpy(), but it allows you to explicitly specify the maximum number of characters to copy. However, after copying, a NULL termination character may not be added. Also, if the length of the source string is shorter than 'n', the remaining space is not filled with NULL.
+= Therefore, 'strncpy()' can be used when strict management of the destination buffer size is required. However, if the size of the destination buffer is known to be sufficient and the copied string needs to be NULL-terminated, 'strcpy()' is a more straightforward and safer choice.
+- In milestone, the more preferable function to use is strcpy() since it's used to copy entire strings into phone->description in the inputPhoneData() function:
+strcpy(phone->description, "CELL");
+strcpy(phone->description, "HOME");
+strcpy(phone->description, "WORK");
+strcpy(phone->description, "TBD");
+: strcpy() is used because it copies the entire string literal ("CELL", "HOME", "WORK", or "TBD") into the phone->description character array. Since the length of the destination buffer is not a concern here, strcpy() is the appropriate choice. If there was a need to limit the number of characters copied, strncpy() would have been used instead.
+
+3. To keep the list of appointments in ascending order based on the appointment's date/time, I applied a sorting algorithm. First, I converted each appointment's date and time to minutes to make it easier to compare and sort them. This conversion was done by converting each component (year, month, day, hour, and minute) into minutes and summing them up. This resulted in a single integer value representing the appointment's date and time in minutes since a reference point. I used a simple bubble sort algorithm to sort the appointments array based on the calculated minutes. Bubble sort compares adjacent elements and swaps them if they are in the wrong order, repeating this process until the array is sorted in ascending order. After sorting, I reverted the minutes back to date and time format by subtracting the accumulated minutes corresponding to years, months, days, and hours from each appointment's time in minutes. After sorting, I loop through the appointments array and display the schedule for the specified date, ensuring that appointments are displayed in ascending order of date/time. I will make sure that sorting and marking logic effectively handles edge cases such as appointments with the same date/time or empty appointment slots to improve the code even more neatly. This will increase accuracy when displaying appointment schedules.
+
+
